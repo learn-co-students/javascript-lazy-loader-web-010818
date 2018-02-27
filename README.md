@@ -11,6 +11,10 @@ Right click on the link below and select "Save link as..." to see a video of how
 [lazy load vid](https://s3-us-west-2.amazonaws.com/web-dev-readme-photos/js/cars.mov)
 
 
+
+
+
+
 ## Background
 
 [Lazy Loading](http://en.wikipedia.org/wiki/Lazy_loading) is a way that web pages increase the speed at which their pages load by only loading some of the content that they want. They then add more content as the client scrolls down.
@@ -24,9 +28,9 @@ You could fix this by loading only the first thirty designs when the user clicks
 
 ## jQuery's `ajax` function
 
-jQuery's [ajax](http://api.jquery.com/jquery.ajax/) function makes an asynchronous HTTP request. 
+jQuery's [ajax](http://api.jquery.com/jquery.ajax/) function makes an asynchronous HTTP request.
 
-For instance, if I wanted to see the Netflix's share price, I could use the MarkIt API. The url for fetching a stock quote via MarkIt is `http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=< stock symbol here>`. Netflix has a symbol of `NFLX`. Therefore, to get its quote info, you would visit [http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=NFLX](http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=NFLX). 
+For instance, if I wanted to see the Netflix's share price, I could use the MarkIt API. The url for fetching a stock quote via MarkIt is `http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=< stock symbol here>`. Netflix has a symbol of `NFLX`. Therefore, to get its quote info, you would visit [http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=NFLX](http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=NFLX).
 
 Here's an example AJAX request that adds Netflix's last stock price to the div `#netflix-price`.
 
@@ -41,7 +45,7 @@ Here's an example AJAX request that adds Netflix's last stock price to the div `
     <h1>Netflix Stock Price</h1>
     <div id="netflix-price"><i class="fa fa-spinner fa-spin"></i> Fetching Data...</div>
     <script>
-    
+
       var url = "http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=NFLX";
 
       $.ajax({
@@ -69,7 +73,7 @@ This lab uses `JSONP`. If you don't know what `JSONP` is, please read [Wikipedia
 
 ## Car API
 
-For this lab, you'll be making requests to [http://mimeocarlisting.azurewebsites.net/api/cars/](http://mimeocarlisting.azurewebsites.net/api/cars/). This is an API that displays cars. It accepts two ending routes, the first of which is the page you're on while the second is the number of cars you'd like to see. 
+For this lab, you'll be making requests to [http://mimeocarlisting.azurewebsites.net/api/cars/](http://mimeocarlisting.azurewebsites.net/api/cars/). This is an API that displays cars. It accepts two ending routes, the first of which is the page you're on while the second is the number of cars you'd like to see.
 
 For instance, to view the first six cars, the url would be [http://mimeocarlisting.azurewebsites.net/api/cars/1/6](http://mimeocarlisting.azurewebsites.net/api/cars/1/6). To fetch the next six cars, the url would change to [http://mimeocarlisting.azurewebsites.net/api/cars/2/6](http://mimeocarlisting.azurewebsites.net/api/cars/2/6).
 
